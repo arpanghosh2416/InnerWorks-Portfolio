@@ -1,4 +1,4 @@
-container {
+.container {
   display: "flex";
   flex-direction: "row";
   align-items: "center";
@@ -10,28 +10,28 @@ container {
 }
 
 
-textContainer {
+.textContainer {
   flex: "1";
   text-align: "left";
   padding-left: "50px";
 }
 
 
-heading {
+.heading {
   font-size: "32px";
   font-weight: "bold";
   margin-bottom: "10px";
 }
 
 
-subheading {
+.subheading {
   font-size: "20px";
   font-weight: "500";
   margin-bottom: "20px";
 }
 
 
-sliderContainer {
+.sliderContainer {
   flex: "1";
   display: "flex";
   align-items: "center";
@@ -39,7 +39,7 @@ sliderContainer {
 }
 
 
-card {
+.card {
   width: "320px";
   height: "420px";
   background-color: "#222";
@@ -54,7 +54,7 @@ card {
 }
 
 
-cardImage {
+.cardImage {
   width: "auto";
   height: "180px";
   object-fit: "cover";
@@ -62,7 +62,7 @@ cardImage {
 }
 
 
-prevButton {
+.prevButton {
   background: "none";
   border: "none";
   color: "white";
@@ -73,7 +73,7 @@ prevButton {
 }
 
 
-nextButton {
+.nextButton {
   background: "none";
   border: "none";
   color: "white";
@@ -84,7 +84,7 @@ nextButton {
 }
 
 
-knowMoreButton {
+.knowMoreButton {
   background-color: "#ffffff";
   color: "white";
   border: "none";
@@ -96,7 +96,7 @@ knowMoreButton {
 }
 
 
-modalOverlay {
+.modalOverlay {
   position: "fixed";
   top: 0;
   left: 0;
@@ -109,7 +109,7 @@ modalOverlay {
 }
 
 
-modal {
+.modal {
   width: "600px";
   background-color: "#ffffff";
   color: "#000";
@@ -120,7 +120,7 @@ modal {
 }
 
 
-closeButton {
+.closeButton {
   background-color: "#E11D48";
   color: "white";
   border: "none";
