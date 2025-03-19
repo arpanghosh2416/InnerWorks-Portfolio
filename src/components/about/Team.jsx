@@ -154,21 +154,8 @@ const styles = {
 };
 
 const Slider = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedExpert, setSelectedExpert] = useState(null);
-
-  const nextSlide = () => {
-    if (currentIndex < sliderData.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-
-  const prevSlide = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
 
   const openModal = (expert) => {
     setSelectedExpert(expert);
@@ -191,7 +178,8 @@ const Slider = () => {
         </p>
 
         <div className="flex items-center gap-3 mt-2">
-          <i className="mkdf-icon-font-awesome fa fa-bank mkdf-icon-element text-[#C9A267] text-3xl"></i>
+          <hr className="w-[10%] flex border-t border-[#C9A267]" />
+          <i className="mkdf-icon-font-awesome fa fa-bank mkdf-icon-element text-[#C9A267] text-xl"></i>
           <hr className="flex-1 w-24 border-t border-[#C9A267]" />
         </div>
 

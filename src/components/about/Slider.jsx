@@ -83,13 +83,16 @@ const Teams = () => {
         </div>
       </div>
       {/* Right Section */}
-      <div className="text-left lg:text-center lg:w-1/2">
+      <div className="text-left lg:text-right lg:w-1/2">
         <h2 className="text-[#C9A267] italic text-lg font-bold">Our Team</h2>
         <p className="text-3xl font-bold">EXPERTS AT WORK</p>
 
         <div className="flex items-center gap-3 mt-2">
-          <i className="fa fa-bank text-[#C9A267] text-3xl"></i>
+          {/* Left border */}
           <hr className="flex-1 border-t border-[#C9A267]" />
+          <i className="fa fa-bank text-[#C9A267] text-xl"></i>
+          {/* Right border */}
+          <hr className="w-[15%] flex border-t border-[#C9A267]" />
         </div>
 
         <p className="text-lg mt-4">
