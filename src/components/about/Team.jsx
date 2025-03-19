@@ -1,13 +1,8 @@
-
 import React, { useState } from "react";
-import bibaswanImage from "../../assets/slider/Mr-Bibaswas-Mukherjee-500x500.webp";
-import sujitImage from "../../assets/slider/Mr-Sujit-Chakraborty-500x500.webp";
-import asimImage from "../../assets/slider/Mr-Ashim-Ali-500x500.webp";
-import deepakImage from "../../assets/slider/Mr-Deepak-Kumar-Dutta-500x500.webp";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 // import styles from "./Slider.module.css";
 import classNames from "classnames";
-import { SCP, BMP, DKDPP, MAAP } from "../../assets";
+import { SCP, BMP, DKDPP, MAAP, BMW, DKDPW, MAAW, SCW } from "../../assets";
 
 const sliderData = [
   {
@@ -17,7 +12,7 @@ const sliderData = [
       "Noted for his prowess in crime detection during his tenure in the detective department.",
     details:
       "Sujit Chakraborty has worked for over 37 years in the detective department, solving numerous high-profile criminal cases. He has extensive experience in forensic investigations and law enforcement strategies.",
-    image: sujitImage,
+    image: SCW,
   },
   {
     id: "Md Asim Ali",
@@ -26,7 +21,7 @@ const sliderData = [
       "Investigated various criminal cases. Possesses sound knowledge about court proceedings.",
     details:
       "Md Asim Ali has been involved in high-profile criminal investigations. His expertise in court proceedings makes him a valuable asset in solving complex legal cases.",
-    image: asimImage,
+    image: MAAW,
   },
   {
     id: "DEEPAK KUMAR DUTTA",
@@ -35,7 +30,7 @@ const sliderData = [
       "Served as an officer in the Detective Department of the Kolkata Police for over 12 years.",
     details:
       "Deepak Kumar Dutta has served in the Kolkata Police for over 12 years. His experience in handling serious crime cases and investigative techniques has made him an expert in the field.",
-    image: deepakImage,
+    image: DKDPW,
   },
   {
     id: "BIBASWAN MUKHERJEE",
@@ -44,7 +39,7 @@ const sliderData = [
       "Specialized knowledge in cyber law and forensics, reflecting a keen understanding of digital legal matters.",
     details:
       "Bibaswan Mukherjee is an expert in cyber law and forensics. His knowledge of digital forensics, cybersecurity, and legal frameworks makes him an authority in the field.",
-    image: bibaswanImage,
+    image: BMW,
   },
 ];
 
@@ -241,7 +236,7 @@ const Slider = () => {
             {selectedExpert.id === "SUJIT CHAKRABORTY" && (
               <div style={{ textAlign: "center" }}>
                 <img
-                  src="src\assets\slider\SUJIT CHAKRABORTY.png"
+                  src={SCP}
                   style={{
                     width: "150px",
                     height: "150px",
@@ -273,7 +268,7 @@ const Slider = () => {
             {selectedExpert.id === "Md Asim Ali" && (
               <div style={{ textAlign: "center" }}>
                 <img
-                  src="src\assets\slider\Md Asim Ali.png"
+                  src={MAAP}
                   style={{
                     width: "150px",
                     height: "150px",
@@ -298,7 +293,7 @@ const Slider = () => {
             {selectedExpert.id === "DEEPAK KUMAR DUTTA" && (
               <div style={{ textAlign: "center" }}>
                 <img
-                  src="src\assets\slider\DEEPAK KUMAR DUTTA.png"
+                  src={DKDPP}
                   style={{
                     width: "150px",
                     height: "150px",
