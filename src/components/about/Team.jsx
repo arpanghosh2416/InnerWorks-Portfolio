@@ -320,7 +320,7 @@ const Slider = () => {
             {selectedExpert.id === "BIBASWAN MUKHERJEE" && (
               <div style={{ textAlign: "center" }}>
                 <img
-                  src="src\assets\slider\BIBASWAN MUKHERJEE.png"
+                  src={BMP}
                   style={{
                     width: "150px",
                     height: "150px",
