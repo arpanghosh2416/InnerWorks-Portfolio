@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 // const tabs = ["Tab1", "Tab2"];
-const Teams = () => {
+const Slider = () => {
   const [sliderData, setSliderData] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -104,4 +104,4 @@ const Teams = () => {
   );
 };
 
-export default Teams;
+export default Slider;

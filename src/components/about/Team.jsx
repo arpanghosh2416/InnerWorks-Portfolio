@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-// import styles from "./Slider.module.css";
-import classNames from "classnames";
+// import styles from "./Team.module.css";
+// import classNames from "classnames";
 import { SCP, BMP, DKDPP, MAAP, BMW, DKDPW, MAAW, SCW } from "../../assets";
 
 const sliderData = [
@@ -153,7 +153,7 @@ const styles = {
   },
 };
 
-const Slider = () => {
+const Team = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedExpert, setSelectedExpert] = useState(null);
 
@@ -225,15 +225,17 @@ const Slider = () => {
               <div style={{ textAlign: "center" }}>
                 <img
                   src={SCP}
-                  style={{
-                    width: "150px",
-                    height: "150px",
-                    borderRadius: "80%",
-                    marginBottom: "10px",
-                    marginLeft: "200px",
-                  }}
+                  alt="Sujit Chakraborty"
+                  className="w-[150px] h-[150px] items-center justify-between rounded-full mb-3 ml-[200px]"
+                  // style={{
+                  //   width: "150px",
+                  //   height: "150px",
+                  //   borderRadius: "80%",
+                  //   marginBottom: "10px",
+                  //   marginLeft: "200px",
+                  // }}
                 />
-                <p>
+                <p className="text-justify items-center">
                   Mr. Sujit Chakraborty, a distinguished individual, holds a
                   B.Sc (Hons), LLB, and LLM degree. With an illustrious career
                   spanning 37 years in the Kolkata Police, he has held various
@@ -257,6 +259,7 @@ const Slider = () => {
               <div style={{ textAlign: "center" }}>
                 <img
                   src={MAAP}
+                  alt="Mr. Md Asim Ali"
                   style={{
                     width: "150px",
                     height: "150px",
@@ -282,6 +285,7 @@ const Slider = () => {
               <div style={{ textAlign: "center" }}>
                 <img
                   src={DKDPP}
+                  alt="Mr. Deepak Kumar Dutta"
                   style={{
                     width: "150px",
                     height: "150px",
@@ -331,6 +335,7 @@ const Slider = () => {
             )}
 
             {/* Close Button */}
+
             <button style={styles.closeButton} onClick={closeModal}>
               Close
             </button>
@@ -341,4 +346,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default Team;
