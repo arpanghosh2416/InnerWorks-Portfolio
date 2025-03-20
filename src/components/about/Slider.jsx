@@ -29,7 +29,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between    p-12 bg-[#415781] text-white gap-8">
+    <div className="flex flex-col lg:flex-row items-center justify-between p-12 bg-[#415781] text-white gap-8">
       {/* Left Section: Card Slider */}
       <div className="relative flex flex-col items-center lg:w-1/2">
         {/* Cards Wrapper */}
@@ -68,7 +68,7 @@ const Slider = () => {
           <button
             onClick={prevSlide}
             disabled={currentIndex === 0}
-            className="text-white bg-[#C9A267] px-4 py-2 rounded-lg disabled:opacity-50"
+            className="text-white bg-[#C9A267] px-4 py-2 rounded-lg disabled:opacity-50 "
           >
             ←
           </button>
@@ -76,7 +76,7 @@ const Slider = () => {
           <button
             onClick={nextSlide}
             disabled={currentIndex >= sliderData.length - 3}
-            className="text-white bg-[#C9A267] px-4 py-2 rounded-lg disabled:opacity-50"
+            className="text-white bg-[#C9A267] px-4 py-2 rounded-lg disabled:opacity-50 overflow:block"
           >
             →
           </button>

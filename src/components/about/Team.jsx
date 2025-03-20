@@ -68,8 +68,8 @@ const Team = () => {
                 className="w-24 h-24 rounded-full mb-4 object-cover"
               />
               <h3 className="text-lg font-semibold text-center">{item.id}</h3>
-              <p className="text-sm text-[#C9A267] font-semibold text-center">{item.title}</p>
-              <p className="text-sm text-center mt-2 flex-grow">{item.description}</p>
+              <p className="text-sm text-[#C9A267] font-semibold items-center justify-between text-center">{item.title}</p>
+              <p className="text-sm text-center mt-2 items-center justify-between flex-grow">{item.description}</p>
               {/* Fixed Button Placement */}
               <button
                 className="px-4 py-2 bg-[#C9A267] text-white font-semibold rounded-lg mt-auto"
