@@ -12,6 +12,7 @@ export default function App() {
       {/* Mobile Warning - Shown only on Mobile */}
       <div id="mobile-warning">
         This website is designed for desktop. <br /> Please open it on a larger screen.
+        <br/>Mobile Version coming Soon.🎉
       </div>
 
       {/* Full Website - Hidden on Mobile */}
