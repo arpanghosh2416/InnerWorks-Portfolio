@@ -96,15 +96,7 @@ export default function Services() {
             <p className="text-gray-600 mt-2">
               {selectedService.title === "Security Services" && (
                 <>
-                  <strong>
-                    Our Premier Security Services: Safeguarding Lives and Assets
-                    with Precision and Care
-                  </strong>
-                  <br />
-                  <br />
-                  At Interwork Advisors LLP, our skilled security professionals
-                  specialize in providing top-notch security services for
-                  individuals, businesses, and organizations. With extensive
+                  ses, and organizations. With extensive
                   expertise, we ensure that your safety and protection remain
                   uncompromised.
                   <br />
@@ -119,7 +111,15 @@ export default function Services() {
                       <strong>Family Protection Services:</strong> Ensuring
                       safety for families with discreet security measures.
                     </li>
-                    <li>
+                    <li><strong>
+                    Our Premier Security Services: Safeguarding Lives and Assets
+                    with Precision and Care
+                  </strong>
+                  <br />
+                  <br />
+                  At Interwork Advisors LLP, our skilled security professionals
+                  specialize in providing top-notch security services for
+                  individuals, busines
                       <strong>Event Security:</strong> Planning and executing
                       security for events of any scale.
                     </li>
