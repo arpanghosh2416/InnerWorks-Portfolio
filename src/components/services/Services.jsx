@@ -23,10 +23,14 @@ export default function Services() {
     <Container>
     <div className="p-6 mt-10 mb-10">
       <div className="text-black">
-        <span className="font-extrabold text-center justify-between items-center text-4xl align-center relative flex mb-4"> OUR SERVICES
-          <br />
-        </span>
-        <span className="text-lg text-justify">
+        <p className="font-extrabold text-center justify-between items-center text-4xl relative flex mb-4"> OUR SERVICES
+        </p>
+        <div className="flex items-center gap-3 mt-2">
+          <hr className="w-[15%] flex border-t border-[#C9A267]" />
+          <i className="mkdf-icon-font-awesome fa fa-bank mkdf-icon-element text-[#C9A267] text-xl"></i>
+          <hr className="flex-1 w-24 border-t border-[#C9A267]" />
+        </div>
+        <p className="text-lg text-justify">
         Innerwork Advisors LLP is a leading provider of <strong>private investigation and man power provider solutions</strong> in Kolkata. At our security and detective firm, we offer a comprehensive range of services tailored to meet the diverse needs of our clients.
         <br />
         Additionally, our detective services include <em>pre-marriage investigations, post-marriage inquiries, extra-marital affair investigations, surveillance, undercover operations, missing person tracing, brand name infringement cases, background verifications and other issues</em>.
@@ -34,7 +38,7 @@ export default function Services() {
         Whether you require security team or investigative support, our firm is committed to delivering professional, credible and transparent services to ensure the best possible outcomes for our clients.
         <br />
 
-        </span>
+        </p>
       </div>
       {/* Section Tabs */}
       <div className="flex justify-center space-x-4 mt-10 mb-8">
