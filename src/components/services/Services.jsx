@@ -22,9 +22,9 @@ export default function Services() {
   return (
     <Container>
     <div className="p-6 mt-10 mb-10">
-      <div className="text-black">
-        <p className="font-extrabold text-center justify-between items-center text-4xl relative flex mb-4"> OUR SERVICES
-        </p>
+      <div className="text-black  text-center justify-between items-center">
+        <h2 className="font-extrabold text-4xl relative flex mb-4 text-center"> OUR SERVICES
+        </h2>
         <div className="flex items-center gap-3 mt-2">
           <hr className="w-[15%] flex border-t border-[#C9A267]" />
           <i className="mkdf-icon-font-awesome fa fa-bank mkdf-icon-element text-[#C9A267] text-xl"></i>
@@ -37,7 +37,6 @@ export default function Services() {
         <br />
         Whether you require security team or investigative support, our firm is committed to delivering professional, credible and transparent services to ensure the best possible outcomes for our clients.
         <br />
-
         </p>
       </div>
       {/* Section Tabs */}
