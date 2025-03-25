@@ -9,6 +9,7 @@ import {
   FaEnvelope,
   FaPhoneAlt,
 } from "react-icons/fa";
+import "./Footer.module.css";
 const Footer = () => {
   return (
     <div className="bg-black relative w-[100%] h-[100%] overflow-hidden">
@@ -32,7 +33,7 @@ const Footer = () => {
           Kolkata’s most trusted provider private investigation and man power
           provider solutions in Kolkata.
         </p>
-        <div className="flex-row"></div>
+        <div className="socials flex-row"></div>
         <div className="flex space-x-2 bottom-0 left-0 py-3 px-1">
           {/* Twitter */}
           <div className="bg-[#3b5998] rounded-full w-10 h-10 flex items-center justify-center hover:bg-[#C9A267] hover:scale-110 transition-transform cursor-pointer">
