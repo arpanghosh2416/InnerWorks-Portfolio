@@ -192,27 +192,7 @@
     text-decoration: none;
     font-size: 1.2rem;
   }
- 
-  .contact-boxes {
-    display: flex;
-    justify-content: space-between;
-    position: absolute; 
-    top: 65px; 
-    left: 0;
-    width: 100%;
-    z-index: 1200;
-    background: transparent;
-    padding: 10px 20px;
-  }
-  
-  .contact-box {
-    background: #C9A267;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    top:65px;
-  }
-  
+
   @media (max-width: 850px) {
     .nav-links {
       display: none;

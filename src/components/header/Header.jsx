@@ -35,7 +35,12 @@ const Header = () => {
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
-
+  const contactCTA = () => {
+    window.location.href = "#contact";
+  };
+  const bookCTA = () => {
+    window.location.href = "#book";
+  };
   // Next Slide Function
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -49,8 +54,38 @@ const Header = () => {
   return (
     // Desktop Version
     <header id="header" className="relative w-full h-screen overflow-hidden">
-{/* Highlight with welcome text and number and mail */}
-      <div className="bg-gray-700 px-4 py-2  relative flex text-center justify-between items-center">
+      {/* Navbar Section */}
+      <nav className="navbar">
+        <a href="#home">
+          <img src={Brandlogo} alt="Brand" className="brand-logo" />
+        </a>
+
+        {/* Desktop Navigation */}
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#Services">Our Services</a></li>
+          <li><a href="#Services">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+        {/* Hamburger Button */}
+        <button className="hamburger" onClick={toggleMenu}>
+          {menuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+        </button>
+      </nav>
+
+      {/* Mobile Navigation */}
+      {menuOpen && (
+        <div className="mobile-nav !text-xs">
+          <ul>
+            <li><a href="#home" onClick={toggleMenu}>Home</a></li>
+            <li><a href="#Services" onClick={toggleMenu}>Our Services</a></li>
+            <li><a href="#Services" onClick={toggleMenu}>About Us</a></li>
+            <li><a href="#contact" onClick={toggleMenu}>Contact Us</a></li>
+          </ul>
+        </div>
+      )}
+      <div className="bg-gray-700 px-4 py-2  top-[40px] relative flex text-center justify-between items-center z-[1300]">
           {/* Number and mail in golden box */}
         <div className="bg-[#C9A267] px-2 border-2 border-black text-white relative flex">
           <div className="justify-between px-4 py-3 items-center flex relative text-sm">
