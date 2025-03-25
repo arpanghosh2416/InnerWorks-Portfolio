@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Image1, Image2, Image3 } from "../../assets";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Image1, Image2, Image3, Brandlogo } from "../../assets";
+import { FaChevronLeft, FaChevronRight, FaBars, FaTimes } from "react-icons/fa";
 import { Content } from "../../assets";
 import Container from "../shared/Container/Container";
 import {
@@ -12,32 +12,38 @@ import {
   FaEnvelope,
   FaPhoneAlt,
 } from "react-icons/fa";
+import "./Header.css";
+
 const images = [Image1, Image2, Image3];
 
 const Header = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  // Auto-slide every 3 seconds (Resets when state changes)
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
-    return () => clearInterval(interval);
-  }, []);
 
+    return () => clearInterval(interval);
+  }, [currentIndex]); // Now resets when currentIndex changes
+
+  // Previous Slide Function
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
+  // Next Slide Function
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
-  const contactCTA = () => {
-    window.location.href = "#contact";
-  };
-  const bookCTA = () => {
-    window.location.href = "#book";
+
+  // Toggle Menu Function
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
@@ -193,13 +199,9 @@ const Header = () => {
         <FaChevronLeft size={30} />
       </button>
  {/* Navigation Arrows - Right*/}
-      <button
-        className="bg-white absolute right-6 top-1/2  p-3 bg-opacity-50 rounded-full text-black hover:bg-opacity-70 transition-all duration-100"
-        onClick={nextSlide}
-      >
+      <button className="next-btn" onClick={nextSlide}>
         <FaChevronRight size={30} />
       </button>
-      {/*End -  Navigation Arrows */}
       </div>
             </Container>
             {/* End - Overlay container*/}
