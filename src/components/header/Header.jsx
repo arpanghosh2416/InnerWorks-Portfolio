@@ -43,7 +43,7 @@ const Header = () => {
   return (
     // Desktop Version
     <header id="header" className="relative w-full h-screen overflow-hidden">
-
+{/* Highlight with welcome text and number and mail */}
       <div className="bg-gray-700 px-4 py-2  relative flex text-center justify-between items-center">
           {/* Number and mail in golden box */}
         <div className="bg-[#C9A267] px-2 border-2 border-black text-white relative flex">
@@ -81,7 +81,8 @@ const Header = () => {
                    {/*END -  Number and mail in golden box */}
         </div>
       </div>
-
+{/* Highlight with welcome text and number and mail */}
+      
       {/* Image Container */}
       <div className="relative inset-0 flex items-center justify-center">
         {images.map((img, index) => (
@@ -98,9 +99,11 @@ const Header = () => {
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover"
             />
-            
+             {/*END -  Image Container */}
             {/* Overlay container*/}
             <Container>
+              {/* Social media icons */}
+              <div>
             <div className="absolute flex space-x-4 top-0 left-0 py-3 w-full  px-4">
                 <div className="border-[3px] rounded-full w-10 h-10 flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
                   <a href="#facebook" alt="facebook">
@@ -124,39 +127,8 @@ const Header = () => {
                          </div>
                        
               </div>
+              {/*END - Social media icons */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-opacity-50 py-2 px-3">
-              {/* Social media icons */}
-             
-
-              {/* <div className="absolute top-12 w-full flex justify-between items-center px-16">
-                <div className="bg-[#C9A267] !flex px-6 py-2 items-center border-2 !border-black">
-                  24x7 Emergency :{"  "}
-                  <a
-                    href="tel:9073672051"
-                    className="text-sm px-1 flex flex-col font-semibold"
-                  >
-                    9073672051
-                  </a>
-                  {"  "}|{"  "}
-                  <a
-                    href="tel:9073932051"
-                    className="text-sm px-1 flex flex-col font-semibold"
-                  >
-                    9073932051
-                  </a>
-                </div>
-
-                <div className="bg-[#C9A267] flex max-w-auto px-6 py-2 items-center border-2 border-black">
-                  Email Id :{"  "}
-                  <a
-                    href="mailto:innerworkadvisorsllp@gmail.com"
-                    className="text-sm px-1 flex flex-col font-semibold"
-                  >
-                    innerworkadvisorsllp@gmail.com
-                  </a>
-                </div>
-              </div> */}
-              {/* End - Number and mail in golden box */}
 
               {/* Headings on Images with slicing*/}
               <span className="text-4xl md:text-4xl mb-4">
@@ -228,9 +200,11 @@ const Header = () => {
         <FaChevronRight size={30} />
       </button>
       {/*End -  Navigation Arrows */}
+      </div>
             </Container>
             {/* End - Overlay container*/}
           </div>
+          
         ))}
       </div>
       {/* End - Image Container */}

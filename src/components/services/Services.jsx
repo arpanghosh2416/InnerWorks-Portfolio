@@ -3,6 +3,7 @@ import { Dialog } from "@headlessui/react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { servicesData } from "../../assets";
+import Container from "../shared/Container/Container";
 
 const sections = ["Investigation", "Security"];
 export default function Services() {
@@ -19,9 +20,24 @@ export default function Services() {
   }, [activeSection]);
 
   return (
-    <div className="p-6">
+    <Container>
+    <div className="p-6 mt-10 mb-10">
+      <div className="text-black">
+        <span className="font-extrabold text-center justify-between items-center text-4xl align-center relative flex mb-4"> OUR SERVICES
+          <br />
+        </span>
+        <span className="text-lg text-justify">
+        Innerwork Advisors LLP is a leading provider of <strong>private investigation and man power provider solutions</strong> in Kolkata. At our security and detective firm, we offer a comprehensive range of services tailored to meet the diverse needs of our clients.
+        <br />
+        Additionally, our detective services include <em>pre-marriage investigations, post-marriage inquiries, extra-marital affair investigations, surveillance, undercover operations, missing person tracing, brand name infringement cases, background verifications and other issues</em>.
+        <br />
+        Whether you require security team or investigative support, our firm is committed to delivering professional, credible and transparent services to ensure the best possible outcomes for our clients.
+        <br />
+
+        </span>
+      </div>
       {/* Section Tabs */}
-      <div className="flex justify-center space-x-4 mb-8">
+      <div className="flex justify-center space-x-4 mt-10 mb-8">
         {sections.map((section) => (
           <button
             key={section}
@@ -2074,5 +2090,6 @@ export default function Services() {
         </Dialog>
       )}
     </div>
+    </Container>
   );
 }

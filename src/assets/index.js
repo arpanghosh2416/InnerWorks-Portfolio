@@ -13,3 +13,4 @@ export { default as DKDPW } from "./slider/Mr-Deepak-Kumar-Dutta-500x500.webp";
 export { default as MAAW } from "./slider/Mr-Ashim-Ali-500x500.webp";
 export { default as SCW } from "./slider/Mr-Sujit-Chakraborty-500x500.webp";
 export { default as servicesData } from "./json/service.json";
+export { default as teamData } from "./json/data.json";

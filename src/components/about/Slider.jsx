@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { teamData } from "../../assets";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 // const tabs = ["Tab1", "Tab2"];
@@ -7,7 +8,7 @@ const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch(teamData)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
