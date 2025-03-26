@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Brandlogo } from "../../assets";
+import {FaBars, FaTimes } from "react-icons/fa";
 const Navbar = () => {
   useEffect(() => {
     const links = document.querySelectorAll("a[href^='#']");
@@ -17,6 +18,11 @@ const Navbar = () => {
       });
     });
   }, []);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <nav className="flex relative top-0 w-full font-mono font-bold justify-between items-center text-white bg-[#415781] shadow-md px-10 py-auto z-50">
@@ -30,7 +36,7 @@ const Navbar = () => {
         </a>
       </section>
       <section className="flex gap-x-8  text-xl">
-        <ul className="flex gap-x-8 text-xl">
+        <ul className={`"flex gap-x-8 text-xl" ${menuOpen ? "open":""}`}>
           <li>
             <a
               href="#home"
@@ -64,6 +70,9 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
+        <button className="hidden bg-[#415781] cursor-pointer text-right border-0" onClick={toggleMenu}>
+          {menuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+        </button>
       </section>
     </nav>
   );

@@ -10,16 +10,7 @@ import Testimonials from "./components/extra/Testimonials";
 export default function App() {
   return (
     <>
-      {/* Mobile Warning - Shown only on Mobile */}
-      <div id="mobile-warning">
-        This website is designed for desktop. <br /> Please open it on a larger
-        screen.
-        <br />
-        Mobile Version coming Soon.🎉
-      </div>
-
-      {/* Full Website - Hidden on Mobile */}
-      <div id="desktop-content">
+     
         <Navbar />
         <Header />
         <Services />
@@ -27,7 +18,6 @@ export default function App() {
         <Slider />
         <Testimonials />
         <Footer />
-      </div>
     </>
   );
 }
