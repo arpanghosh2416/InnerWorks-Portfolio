@@ -73,9 +73,6 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        {/* <button className="hidden bg-[#415781] cursor-pointer text-right border-0" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
-        </button> */}
       </section>
     </nav>
   );
