@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Brandlogo } from "../../assets";
 import { Dropdown, DropMenu } from "../shared";
-import { Book } from "react-feather";
+import { Book, BookOpen, File } from "react-feather";
 import { DropdownItem } from "../shared/Dropdown/Dropdown";
 // import {FaBars, FaTimes } from "react-icons/fa";
 const Navbar = () => {
@@ -64,10 +64,10 @@ const Navbar = () => {
                 <Book size={20} />Our Blogs
               </DropdownItem>
               <DropdownItem>
-                <Book size={20} />Our Legal Insights
+                <BookOpen size={20} />Our Legal Insights
               </DropdownItem>
               <DropdownItem>
-                <Book size={20} />Our Case Studies
+                <File size={20} />Our Case Studies
               </DropdownItem>
               </Dropdown>
             </a>
