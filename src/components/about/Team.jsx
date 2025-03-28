@@ -5,7 +5,6 @@ import SujitImage from "../../assets/slider/Mr-Sujit-Chakraborty-500x500.webp";
 import AsimImage from "../../assets/slider/Mr-Ashim-Ali-500x500.webp";
 import DeepakImage from "../../assets/slider/Mr-Deepak-Kumar-Dutta-500x500.webp";
 import styles from "./Team.module.css"; 
-import Container from "../shared/Container/Container";
 
 const imageMap = {
   "Mr-Sujit-Chakraborty-500x500.webp": SujitImage,
@@ -37,10 +36,8 @@ const Team = () => {
   };
 
   return (
-
     <div className="flex flex-col lg:flex-row items-center justify-between p-12 bg-[#415781] text-white gap-8">
       {/* Left Section - Writing */}
- 
       <div className="text-left lg:w-1/2">
         <h2 className="text-[#C9A267] italic font-bold text-lg">Our Team</h2>
         <p className="text-3xl font-bold">THE PILLARS</p>
@@ -56,23 +53,20 @@ const Team = () => {
           achieve favourable results for our clients.
         </p>
       </div>
-      
 
       {/* Right Section - Three Cards */}
-
-      <div className="w-auto flex flex-col relative justify-center">
+      <div className="lg:w-1/2 flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {teamMembers.slice(0, 3).map((item, index) => (
-            <Container>
             <div
-            key={index}
-            className="bg-black text-white p-6 rounded-lg shadow-lg flex flex-col items-center justify-between h-[380px] max-w-[300px]"
+              key={index}
+              className="bg-black text-white p-6 rounded-lg shadow-lg flex flex-col items-center justify-between h-[380px] max-w-[300px]"
             >
               <img
                 src={item.image}
                 alt={item.id}
                 className="w-24 h-24 rounded-full mb-4 object-cover"
-                />
+              />
               <h3 className="text-lg font-semibold text-center">{item.id}</h3>
               <p className="text-sm text-[#C9A267] font-semibold items-center justify-between text-center">{item.title}</p>
               <p className="text-sm text-center mt-2 items-center justify-between flex-grow">{item.description}</p>
@@ -80,16 +74,14 @@ const Team = () => {
               <button
                 className="px-4 py-2 bg-[#C9A267] text-white font-semibold rounded-lg mt-auto"
                 onClick={() => openModal(item)}
-                >
+              >
                 Know More
               </button>
             </div>
-            </Container>
           ))}
         </div>
       </div>
-       
-      
+
       {/* Modal Section */}
       {isModalOpen && selectedMember && (
         <div className={styles.modalOverlay}>
@@ -100,10 +92,10 @@ const Team = () => {
               alt={selectedMember.id}
               className="w-24 h-24 rounded-full mx-auto mb-3"
             />
-            <span className="text-[#C9A267] text-sm mt-2 mb-2 font-semibold">
+            <p className="text-[#C9A267] text-sm mt-2 font-semibold">
               {selectedMember.details}
-            </span>
-            <p className="text-gray-700 text-justify items-center justify-between text-sm mt-2 mb-2">
+            </p>
+            <p className="text-gray-700 text-justify text-sm mt-2">
               {selectedMember.extra}
             </p>
             <button className={styles.closeButton} onClick={closeModal}>

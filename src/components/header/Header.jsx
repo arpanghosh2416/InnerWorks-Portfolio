@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Image1, Image2, Image3, Brandlogo } from "../../assets";
-import { FaChevronLeft, FaChevronRight, FaBars, FaTimes } from "react-icons/fa";
+import { Image1, Image2, Image3 } from "../../assets";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Content } from "../../assets";
 import Container from "../shared/Container/Container";
 import {
@@ -8,32 +8,30 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaMobileAlt,
-  FaEnvelope,
-  FaPhoneAlt,
+  // FaMobileAlt,
+  // FaEnvelope,
+  // FaPhoneAlt,
 } from "react-icons/fa";
-import "./Header.css";
-
 const images = [Image1, Image2, Image3];
 
 const Header = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Auto-slide every 3 seconds (Resets when state changes)
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
-
     return () => clearInterval(interval);
-  }, [currentIndex]); // Now resets when currentIndex changes
+  }, []);
 
-  // Previous Slide Function
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
   const contactCTA = () => {
     window.location.href = "#contact";
@@ -41,51 +39,12 @@ const Header = () => {
   const bookCTA = () => {
     window.location.href = "#book";
   };
-  // Next Slide Function
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  // Toggle Menu Function
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
 
   return (
     // Desktop Version
     <header id="header" className="relative w-full h-screen overflow-hidden">
-      {/* Navbar Section */}
-      <nav className="navbar">
-        <a href="#home">
-          <img src={Brandlogo} alt="Brand" className="brand-logo" />
-        </a>
 
-        {/* Desktop Navigation */}
-        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#Services">Our Services</a></li>
-          <li><a href="#Services">About Us</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-
-        {/* Hamburger Button */}
-        <button className="hamburger" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
-        </button>
-      </nav>
-
-      {/* Mobile Navigation */}
-      {menuOpen && (
-        <div className="mobile-nav !text-xs">
-          <ul>
-            <li><a href="#home" onClick={toggleMenu}>Home</a></li>
-            <li><a href="#Services" onClick={toggleMenu}>Our Services</a></li>
-            <li><a href="#Services" onClick={toggleMenu}>About Us</a></li>
-            <li><a href="#contact" onClick={toggleMenu}>Contact Us</a></li>
-          </ul>
-        </div>
-      )}
-      <div className="bg-gray-700 px-4 py-2  top-[40px] relative flex text-center justify-between items-center z-[1300]">
+      <div className="bg-gray-700 px-4 py-2  relative flex text-center justify-between items-center">
           {/* Number and mail in golden box */}
         <div className="bg-[#C9A267] px-2 border-2 border-black text-white relative flex">
           <div className="justify-between px-4 py-3 items-center flex relative text-sm">
@@ -122,8 +81,7 @@ const Header = () => {
                    {/*END -  Number and mail in golden box */}
         </div>
       </div>
-{/* Highlight with welcome text and number and mail */}
-      
+
       {/* Image Container */}
       <div className="relative inset-0 flex items-center justify-center">
         {images.map((img, index) => (
@@ -140,12 +98,11 @@ const Header = () => {
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover"
             />
-             {/*END -  Image Container */}
+            
             {/* Overlay container*/}
             <Container>
-              {/* Social media icons */}
-              <div>
             <div className="absolute flex space-x-4 top-0 left-0 py-3 w-full  px-4">
+              {/* Social media icons */}
                 <div className="border-[3px] rounded-full w-10 h-10 flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
                   <a href="#facebook" alt="facebook">
                            <FaFacebookF className="text-white text-md" />
@@ -168,9 +125,10 @@ const Header = () => {
                          </div>
                        
               </div>
-              {/*END - Social media icons */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-opacity-50 py-2 px-3">
-
+              {/*END - Social media icons */}
+             
+              
               {/* Headings on Images with slicing*/}
               <span className="text-4xl md:text-4xl mb-4">
                 <strong>
@@ -226,27 +184,28 @@ const Header = () => {
                 </div>
               {/*End - CTA Buttons */}
             </div>
-             {/* Navigation Arrows - left*/}
-            <button
+       </Container>
+      {/* End - Overlay container*/}
+   </div>
+        ))}
+  </div>
+      {/* End - Image Container */}
+
+   {/* Navigation Arrows - left*/}
+   <button
         className=" bg-white absolute left-6 top-1/2  p-3 bg-opacity-50 rounded-full text-black hover:bg-opacity-70 transition-all duration-100"
         onClick={prevSlide}
       >
         <FaChevronLeft size={30} />
       </button>
  {/* Navigation Arrows - Right*/}
-      <button className="next-btn" onClick={nextSlide}>
+      <button
+        className="bg-white absolute right-6 top-1/2  p-3 bg-opacity-50 rounded-full text-black hover:bg-opacity-70 transition-all duration-100"
+        onClick={nextSlide}
+      >
         <FaChevronRight size={30} />
       </button>
-      </div>
-            </Container>
-            {/* End - Overlay container*/}
-          </div>
-          
-        ))}
-      </div>
-      {/* End - Image Container */}
-
-  
+      {/*End -  Navigation Arrows */}
     </header>
   );
 };
